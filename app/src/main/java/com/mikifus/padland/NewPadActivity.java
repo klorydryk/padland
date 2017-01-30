@@ -184,13 +184,15 @@ public class NewPadActivity extends PadLandActivity {
             Toast.makeText(this, (getString(R.string.newpad_noname_warning)), Toast.LENGTH_LONG).show();
             return;
         }
+
+        /* URL can contains accentuated caracters. Can't apply any simple verification like that
         Pattern p = Pattern.compile( "[a-zA-Z0-9-_]+" );
         Matcher m = p.matcher( padName );
         if( !m.matches() )
         {
             Toast.makeText(this, "The pad name contains invalid characters.", Toast.LENGTH_LONG).show();
             return;
-        }
+        }*/
 
         String padUrl = padPrefix + padName;
 
